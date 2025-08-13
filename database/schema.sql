@@ -5,6 +5,16 @@
 -- Description: SQL schema for the e-commerce application database
 -- =============================================
 
+-- Drop tables if they exist (in reverse order of dependencies)
+DROP TABLE IF EXISTS order_items CASCADE;
+DROP TABLE IF EXISTS orders CASCADE;
+DROP TABLE IF EXISTS cart CASCADE;
+DROP TABLE IF EXISTS product_images CASCADE;
+DROP TABLE IF EXISTS reviews CASCADE;
+DROP TABLE IF EXISTS products CASCADE;
+DROP TABLE IF EXISTS categories CASCADE;
+DROP TABLE IF EXISTS users CASCADE;
+
 /*
 DATABASE SCHEMA DOCUMENTATION
 
@@ -75,6 +85,7 @@ CREATE TABLE categories (
     name VARCHAR(100) NOT NULL,
     description TEXT,
     image_url VARCHAR(255),
+    parent_id INTEGER REFERENCES categories(category_id) ON DELETE SET NULL,
     created_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
     updated_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP
 );

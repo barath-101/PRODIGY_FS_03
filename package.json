@@ -1,0 +1,25 @@
+{
+  "name": "prodigy_fs_03",
+  "version": "1.0.0",
+  "description": "",
+  "main": "test-db.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/barath-101/PRODIGY_FS_03.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/barath-101/PRODIGY_FS_03/issues"
+  },
+  "homepage": "https://github.com/barath-101/PRODIGY_FS_03#readme",
+  "dependencies": {
+    "dotenv": "^17.2.1",
+    "pg": "^8.16.3"
+  }
+}
